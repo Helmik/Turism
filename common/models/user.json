@@ -1,0 +1,27 @@
+{
+  "name": "user",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reviews": {
+      "type": "hasOne",
+      "model": "Review",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Food",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "state": {
+      "type": "belongsTo",
+      "model": "State",
+      "foreignKey": ""
+    },
+    "places": {
+      "type": "hasMany",
+      "model": "Place",
+      "foreignKey": "",
+      "through": "FoodPlace"
+    },
+    "reviews": {
+      "type": "hasOne",
+      "model": "Review",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

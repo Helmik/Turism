@@ -1,0 +1,27 @@
+{
+  "name": "Country",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "states": {
+      "type": "hasOne",
+      "model": "State",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

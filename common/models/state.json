@@ -1,0 +1,36 @@
+{
+  "name": "State",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "country": {
+      "type": "belongsTo",
+      "model": "Country",
+      "foreignKey": ""
+    },
+    "places": {
+      "type": "hasOne",
+      "model": "Place",
+      "foreignKey": ""
+    },
+    "food": {
+      "type": "hasOne",
+      "model": "Food",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

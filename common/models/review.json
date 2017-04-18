@@ -1,0 +1,37 @@
+{
+  "name": "Review",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "ranking": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "place": {
+      "type": "belongsTo",
+      "model": "Place",
+      "foreignKey": ""
+    },
+    "food": {
+      "type": "belongsTo",
+      "model": "Food",
+      "foreignKey": ""
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
